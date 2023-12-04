@@ -5,14 +5,14 @@ func _ready():
 		if GlobalStats.curr_battle == 0:
 			$Sprite.texture = load("res://sprites/BusinessChallengeScreen.png")
 		if GlobalStats.curr_battle == 1:
-			$Sprite.texture = load("res://sprites/BusinessChallengeScreen.png")
+			$Sprite.texture = load("res://sprites/AEChallengeScreen.png")
 		if GlobalStats.curr_battle == 2:
-			$Sprite.texture = load("res://sprites/BusinessChallengeScreen.png")
+			$Sprite.texture = load("res://sprites/MEChallengerScreen.png")
 	if GlobalStats.major == "ME":
 		if GlobalStats.curr_battle == 0:
 			$Sprite.texture = load("res://sprites/BusinessChallengeScreen.png")
 		if GlobalStats.curr_battle == 1:
-			$Sprite.texture = load("res://sprites/BusinessChallengeScreen.png")
+			$Sprite.texture = load("res://sprites/AEChallengeScreen.png")
 		if GlobalStats.curr_battle == 2:
 			$Sprite.texture = load("res://sprites/CMChallengeScreen.png")
 	if GlobalStats.major == "AE":
@@ -24,11 +24,11 @@ func _ready():
 			$Sprite.texture = load("res://sprites/BusinessChallengeScreen.png")
 	if GlobalStats.major == "BA":
 		if GlobalStats.curr_battle == 0:
-			$Sprite.texture = load("res://sprites/CMChallengerScreen.png")
+			$Sprite.texture = load("res://sprites/CMChallengeScreen.png")
 		if GlobalStats.curr_battle == 1:
-			$Sprite.texture = load("res://sprites/MEChallengeScreen.png")
+			$Sprite.texture = load("res://sprites/MEChallengerScreen.png")
 		if GlobalStats.curr_battle == 2:
-			$Sprite.texture = load("res://sprites/BusinessChallengeScreen.png")
+			$Sprite.texture = load("res://sprites/AEChallengeScreen.png")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

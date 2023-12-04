@@ -113,6 +113,10 @@ func _on_Attack_pressed():
 				$Buzzcard.texture = load("res://sprites/buzzcards/MEbuzzcard.png")
 				$Buzzcard.rect_scale = Vector2(0.15, 0.15)
 				$Buzzcard.rect_position = Vector2(180, 200)
+			if enemy.name == "Aerospace Engineer":
+				$Buzzcard.texture = load("res://sprites/buzzcards/AEbuzzcard.png")
+				$Buzzcard.rect_scale = Vector2(0.15, 0.15)
+				$Buzzcard.rect_position = Vector2(180, 200)
 			$Buzzcard.show()
 			yield(self, "textbox_closed")
 		

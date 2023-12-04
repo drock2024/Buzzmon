@@ -47,9 +47,9 @@ func _on_Business_pressed():
 
 
 func _on_AE_focus_entered():
-	$Character.texture = load("res://sprites/mehead.png")
+	$Character.texture = load("res://sprites/aerohead.png")
 	$Major.text = "Aerospace Engineer"
-	$Character.scale = Vector2(0.25, 0.25)
+	$Character.scale = Vector2(0.2, 0.2)
 
 
 func _on_CM_focus_entered():
