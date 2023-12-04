@@ -24,7 +24,7 @@ func _ready():
 	elif GlobalStats.major == "BA":
 		$Player.texture = load("res://sprites/BusinessFrontSmall.png")
 	elif GlobalStats.major == "AE":
-		$Player.texture = load("res://sprites/BusinessFrontSmall.png")
+		$Player.texture = load("res://sprites/AEFrontSmall.png")
 	elif GlobalStats.major == "CM":
 		$Player.texture = load("res://sprites/CMFrontSmall.png")
 	
