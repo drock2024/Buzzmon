@@ -201,7 +201,6 @@ __meta__ = {
 }
 
 [node name="Buzzcard" type="TextureRect" parent="."]
-visible = false
 margin_left = 248.0
 margin_top = 216.0
 margin_right = 910.0

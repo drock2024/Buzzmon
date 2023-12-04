@@ -102,6 +102,17 @@ func _on_Attack_pressed():
 		
 		if GlobalStats.curr_battle < 3:
 			display_text("Take this, you've earned it.")
+			if enemy.name == "Business Major":
+				$Buzzcard.texture = load("res://sprites/buzzcards/businessbuzzcard.png")
+				$Buzzcard.rect_scale = Vector2(0.25, 0.25)
+			if enemy.name == "Computational Media Major":
+				$Buzzcard.texture = load("res://sprites/buzzcards/CMbuzzcard.png")
+				$Buzzcard.rect_scale = Vector2(0.15, 0.15)
+				$Buzzcard.rect_position = Vector2(180, 200)
+			if enemy.name == "Mechanical Engineer":
+				$Buzzcard.texture = load("res://sprites/buzzcards/MEbuzzcard.png")
+				$Buzzcard.rect_scale = Vector2(0.15, 0.15)
+				$Buzzcard.rect_position = Vector2(180, 200)
 			$Buzzcard.show()
 			yield(self, "textbox_closed")
 		
