@@ -29,6 +29,7 @@ func _ready():
 func _on_Start_pressed():
 	get_tree().change_scene("res://src/Character Select.tscn")
 	#get_tree().change_scene("res://src/BuzzBattle.tscn")
+	#get_tree().change_scene("res://src/BuzzIntro.tscn")
 
 
 func _on_End_pressed():

@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/BuzzIntro.gd" type="Script" id=1]
+[ext_resource path="res://sprites/buzzflyin.png" type="Texture" id=2]
+[ext_resource path="res://fonts/NES.tres" type="DynamicFont" id=3]
+[ext_resource path="res://music/BossFightIntro.wav" type="AudioStream" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="BuzzIntro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -4.35675
+margin_top = -5.61237
+margin_right = 1303.64
+margin_bottom = 728.388
+color = Color( 0.164706, 0.164706, 0.164706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stripe1" type="ColorRect" parent="."]
+margin_left = -75.0
+margin_top = -1012.0
+margin_right = 1250.0
+margin_bottom = -946.0
+rect_rotation = 45.0
+color = Color( 0.964706, 0.968627, 0.266667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stripe2" type="ColorRect" parent="."]
+margin_left = 201.965
+margin_top = -138.862
+margin_right = 1529.96
+margin_bottom = -72.8618
+rect_rotation = 45.0
+color = Color( 0.964706, 0.968627, 0.266667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stripe3" type="ColorRect" parent="."]
+margin_left = -199.672
+margin_top = 44.9859
+margin_right = 1128.33
+margin_bottom = 110.986
+rect_rotation = 45.0
+color = Color( 0.964706, 0.968627, 0.266667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Buzz" type="Sprite" parent="."]
+position = Vector2( 1696.82, 362.304 )
+scale = Vector2( 0.503377, 0.503377 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 22.3482
+margin_top = 619.497
+margin_right = 244.348
+margin_bottom = 698.497
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 3 )
+text = "Let's Go"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -4.0
+autoplay = true
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

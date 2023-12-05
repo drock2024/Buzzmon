@@ -138,7 +138,7 @@ func _on_Attack_pressed():
 		if GlobalStats.curr_battle < 3:
 			get_tree().change_scene("res://src/ChallengerCard.tscn")
 		elif GlobalStats.curr_battle == 3:
-			get_tree().change_scene("res://src/BuzzBattle.tscn")
+			get_tree().change_scene("res://src/BuzzIntro.tscn")
 		else:
 			get_tree().change_scene("res://src/Main Menu.tscn")
 
