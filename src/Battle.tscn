@@ -222,7 +222,7 @@ __meta__ = {
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
-margin_right = 143.0
+margin_right = 144.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 0, 16 )
 custom_styles/fg = SubResource( 1 )
@@ -245,8 +245,8 @@ __meta__ = {
 
 [node name="Enemy" type="TextureRect" parent="EnemyContainer"]
 margin_top = 20.0
-margin_right = 143.0
-margin_bottom = 260.0
+margin_right = 144.0
+margin_bottom = 116.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 

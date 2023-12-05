@@ -8,6 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GlobalStats.curr_battle = 0
 	$Start.grab_focus()
 	var font = DynamicFont.new()
 	font.font_data = load("res://alagard.ttf")

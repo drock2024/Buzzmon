@@ -20,13 +20,17 @@ func _ready():
 	
 	if GlobalStats.major == "ME":
 		$Player.texture = load("res://sprites/EngineerFrontSmall.png")
+		$Player.flip_h = true
 		$Player.rect_scale = Vector2(0.7, 0.7)
 	elif GlobalStats.major == "BA":
 		$Player.texture = load("res://sprites/BusinessFrontSmall.png")
+		$Player.flip_h = true
 	elif GlobalStats.major == "AE":
 		$Player.texture = load("res://sprites/AEFrontSmall.png")
+		$Player.flip_h = false
 	elif GlobalStats.major == "CM":
 		$Player.texture = load("res://sprites/CMFrontSmall.png")
+		$Player.flip_h = true
 	
 	$Textbox.hide()
 	$ActionsPanel.hide()

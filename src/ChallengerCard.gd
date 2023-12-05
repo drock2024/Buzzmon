@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	$Button.grab_focus();
 	if GlobalStats.major == "CM":
 		if GlobalStats.curr_battle == 0:
 			$Sprite.texture = load("res://sprites/BusinessChallengeScreen.png")
