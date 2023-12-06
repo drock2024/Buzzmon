@@ -6,7 +6,7 @@
 [ext_resource path="res://src/Battle.gd" type="Script" id=4]
 [ext_resource path="res://src/Buzz.tres" type="Resource" id=5]
 [ext_resource path="res://sprites/EngineerFrontSmall.png" type="Texture" id=6]
-[ext_resource path="res://music/BossFightMusicv2.wav" type="AudioStream" id=7]
+[ext_resource path="res://music/BuzzBossFight.wav" type="AudioStream" id=7]
 [ext_resource path="res://sprites/buzzcards/businessbuzzcard.png" type="Texture" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -223,7 +223,7 @@ __meta__ = {
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
-margin_right = 143.0
+margin_right = 144.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 0, 16 )
 custom_styles/fg = SubResource( 1 )
@@ -246,8 +246,8 @@ __meta__ = {
 
 [node name="Enemy" type="TextureRect" parent="EnemyContainer"]
 margin_top = 20.0
-margin_right = 143.0
-margin_bottom = 260.0
+margin_right = 144.0
+margin_bottom = 116.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 
