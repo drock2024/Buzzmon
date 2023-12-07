@@ -35,7 +35,7 @@ func _ready():
 	if (GlobalStats.buzz_count == 3):
 		$ActionsPanel/Actions/Swap.visible = true
 	resetStats()
-	if GlobalStats.buzz_count == 3 and GlobalStats.curr_battle == 3:
+	if GlobalStats.curr_battle == 3:
 		enemy.damage = 100
 		enemy.health = 1000
 		set_health($EnemyContainer/ProgressBar, current_enemy_health, enemy.health)
