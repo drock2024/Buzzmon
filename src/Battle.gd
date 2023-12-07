@@ -10,7 +10,7 @@ var is_defending = false
 
 var specialMoves = {
 	"BA": ["Sunk Cost Fallacy", "Rizz"],
-	"CM": ["Binary Beam","Liberal Self-Love"],
+	"CM": ["Binary Beam","Self-Love"],
 	"AE": ["Aerodynamic Assault", "Defensive Driving"],
 	"ME": ["Assault: Downgrade", "Defense: Downgrade"]
 }
@@ -20,7 +20,7 @@ var specialMovesDamage = {
 	"Powerpoint Push": 20, 
 	"Rizz": 0,
 	"Binary Beam": 100,
-	"Liberal Self-Love": 10, 
+	"Self-Love": 10, 
 	"Digital Dash": 0,
 	"Orbital Strike": 100, 
 	"Aerodynamic Assault": 0, 
@@ -186,7 +186,7 @@ func specialMoves(moveName: String):
 			$AnimationPlayer.play("enemy_damaged")
 			yield($AnimationPlayer, "animation_finished")
 			
-			display_text("You rizzed %s into submission!" % enemy.name)
+			display_text("You rizzed %s!" % enemy.name)
 			yield(self, "textbox_closed")
 	elif moveName == "Binary Beam":
 		display_text("You used Binary Beam!")
@@ -200,8 +200,8 @@ func specialMoves(moveName: String):
 		
 		display_text("You dealt %d damage!" % damage)
 		yield(self, "textbox_closed")
-	elif moveName == "Liberal Self-Love":
-		display_text("You used Liberal Self-Love!")
+	elif moveName == "Self-Love":
+		display_text("You used Self-Love!")
 		yield(self, "textbox_closed")
 		
 		State.max_health = 100
@@ -230,7 +230,7 @@ func specialMoves(moveName: String):
 		display_text("You doubled your damage!")
 		yield(self, "textbox_closed")
 	elif moveName == "Defensive Driving":
-		display_text("You used Aerodynamic Assault!")
+		display_text("You used Defensive Driving!")
 		yield(self, "textbox_closed")
 		
 		State.defense *= 2
@@ -263,7 +263,7 @@ func specialMoves(moveName: String):
 #	"Powerpoint Push": 20, 
 #	"Rizz": 0,
 #	"Binary Beam": 50,
-#	"Liberal Self-Love": 10, 
+#	"Self-Love": 10, 
 #	"Digital Dash": 0,
 #	"Orbital Strike": 100, 
 #	"Aerodynamic Assault": 0, 

@@ -38,10 +38,10 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="StyleBoxFlat" id=17]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="StyleBoxFlat" id=18]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -49,7 +49,7 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -57,14 +57,14 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="DynamicFontData" id=7]
+[sub_resource type="DynamicFontData" id=9]
 antialiased = false
 font_path = "res://fonts/Adventurer.ttf"
 
-[sub_resource type="DynamicFont" id=8]
-font_data = SubResource( 7 )
+[sub_resource type="DynamicFont" id=10]
+font_data = SubResource( 9 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=11]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("EnemyContainer/Enemy:modulate")
@@ -103,7 +103,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=12]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("EnemyContainer/Enemy:modulate")
@@ -118,8 +118,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=11]
-resource_name = "enemy_died"
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("EnemyContainer:modulate")
 tracks/0/interp = 2
@@ -133,8 +132,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=12]
-resource_name = "mini_shake"
+[sub_resource type="Animation" id=14]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Camera2D:position")
@@ -149,7 +147,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1, -2 ), Vector2( 2, 2 ), Vector2( -2, 2 ), Vector2( 1, -2 ), Vector2( -3, -2 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=15]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Camera2D:position")
@@ -164,17 +162,17 @@ tracks/0/keys = {
 "values": [ Vector2( -7, -7 ), Vector2( 8, 8 ), Vector2( -5, 6 ), Vector2( 5, -4 ), Vector2( -7, -5 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="StyleBoxFlat" id=14]
+[sub_resource type="StyleBoxFlat" id=16]
 bg_color = Color( 0.227451, 0.67451, 0.360784, 1 )
 
-[sub_resource type="StyleBoxFlat" id=15]
+[sub_resource type="StyleBoxFlat" id=17]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 
-[sub_resource type="StyleBoxFlat" id=16]
+[sub_resource type="StyleBoxFlat" id=18]
 bg_color = Color( 0.227451, 0.67451, 0.360784, 1 )
 
 [node name="Battle" type="Control"]
@@ -240,8 +238,8 @@ percent_visible = false
 [node name="Label" type="Label" parent="EnemyContainer/ProgressBar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "HP: 25/50"
 align = 1
 valign = 1
@@ -297,8 +295,8 @@ percent_visible = false
 [node name="Label" type="Label" parent="PlayerPanel/PlayerData/ProgressBar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "HP: 25/50"
 align = 1
 valign = 1
@@ -328,13 +326,13 @@ margin_bottom = 20.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 3 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "Attack"
 
@@ -345,13 +343,13 @@ margin_bottom = 20.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 3 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "Defend"
 
@@ -362,13 +360,13 @@ margin_bottom = 20.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 3 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 enabled_focus_mode = 0
 text = "Special"
 
@@ -380,13 +378,13 @@ margin_bottom = 19.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 3 )
-custom_styles/hover = SubResource( 17 )
-custom_styles/pressed = SubResource( 17 )
-custom_styles/normal = SubResource( 18 )
 enabled_focus_mode = 0
 text = "Binary Beam"
 
@@ -398,13 +396,13 @@ margin_bottom = 19.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 3 )
-custom_styles/hover = SubResource( 17 )
-custom_styles/pressed = SubResource( 17 )
-custom_styles/normal = SubResource( 18 )
 enabled_focus_mode = 0
 
 [node name="Special3" type="Button" parent="ActionsPanel/Actions"]
@@ -415,13 +413,13 @@ margin_bottom = 19.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 3 )
-custom_styles/hover = SubResource( 17 )
-custom_styles/pressed = SubResource( 17 )
-custom_styles/normal = SubResource( 18 )
 enabled_focus_mode = 0
 
 [node name="Special4" type="Button" parent="ActionsPanel/Actions"]
@@ -432,13 +430,13 @@ margin_bottom = 19.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 3 )
-custom_styles/hover = SubResource( 17 )
-custom_styles/pressed = SubResource( 17 )
-custom_styles/normal = SubResource( 18 )
 enabled_focus_mode = 0
 
 [node name="Back" type="Button" parent="ActionsPanel/Actions"]
@@ -449,13 +447,13 @@ margin_bottom = 19.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 3 )
-custom_styles/hover = SubResource( 17 )
-custom_styles/pressed = SubResource( 17 )
-custom_styles/normal = SubResource( 18 )
 enabled_focus_mode = 0
 text = "Back"
 
@@ -465,7 +463,7 @@ margin_left = 117.292
 margin_top = 9.18921
 margin_right = -702.708
 margin_bottom = 65.1892
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -477,7 +475,7 @@ margin_left = 8.0
 margin_top = 8.0
 margin_right = -8.0
 margin_bottom = -8.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 10 )
 text = "A DRAGON appears!"
 
 [node name="Ticker" type="Label" parent="Textbox"]
@@ -489,15 +487,15 @@ margin_left = -11.0
 margin_top = -19.0
 margin_right = -4.0
 margin_bottom = -3.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 10 )
 text = ">"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 9 )
-anims/enemy_damaged = SubResource( 10 )
-anims/enemy_died = SubResource( 11 )
-anims/mini_shake = SubResource( 12 )
-anims/shake = SubResource( 13 )
+anims/RESET = SubResource( 11 )
+anims/enemy_damaged = SubResource( 12 )
+anims/enemy_died = SubResource( 13 )
+anims/mini_shake = SubResource( 14 )
+anims/shake = SubResource( 15 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -512,9 +510,9 @@ margin_right = 294.0
 margin_bottom = 192.0
 focus_neighbour_right = NodePath("../No")
 mouse_filter = 2
+custom_styles/focus = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
 custom_fonts/font = ExtResource( 3 )
-custom_styles/focus = SubResource( 14 )
-custom_styles/normal = SubResource( 15 )
 text = "Yes"
 
 [node name="No" type="Button" parent="."]
@@ -525,9 +523,9 @@ margin_right = 398.0
 margin_bottom = 192.0
 focus_neighbour_left = NodePath("../Yes")
 mouse_filter = 2
+custom_styles/focus = SubResource( 18 )
+custom_styles/normal = SubResource( 17 )
 custom_fonts/font = ExtResource( 3 )
-custom_styles/focus = SubResource( 16 )
-custom_styles/normal = SubResource( 15 )
 text = "No"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -537,7 +535,6 @@ __meta__ = {
 stream = ExtResource( 7 )
 volume_db = -4.0
 autoplay = true
-
 [connection signal="pressed" from="ActionsPanel/Actions/Attack" to="." method="_on_Attack_pressed"]
 [connection signal="pressed" from="ActionsPanel/Actions/Defend" to="." method="_on_Defend_pressed"]
 [connection signal="pressed" from="ActionsPanel/Actions/Special" to="." method="_on_Special_pressed"]
