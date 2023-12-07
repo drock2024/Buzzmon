@@ -74,9 +74,6 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 text = "Computational Media"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ME" type="Button" parent="."]
 margin_left = 680.0
@@ -147,6 +144,7 @@ margin_bottom = 138.35
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = ExtResource( 5 )
 text = "Business Administration"
+
 [connection signal="focus_entered" from="CM" to="." method="_on_CM_focus_entered"]
 [connection signal="pressed" from="CM" to="." method="_on_CM_pressed"]
 [connection signal="focus_entered" from="ME" to="." method="_on_ME_focus_entered"]

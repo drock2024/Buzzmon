@@ -9,3 +9,5 @@ name = "Buzz"
 texture = ExtResource( 2 )
 health = 100
 damage = 50
+defense = 1
+stunned = 0

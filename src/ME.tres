@@ -9,3 +9,5 @@ name = "Mechanical Engineer"
 texture = ExtResource( 2 )
 health = 50
 damage = 15
+defense = 1
+stunned = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://sprites/TechGreen1.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Dragon.png" type="Texture" id=2]
@@ -26,17 +26,6 @@ expand_margin_bottom = 1.0
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0, 0, 0, 0.509804 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 1, 1, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0, 0, 0, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 1, 1, 1, 1 )
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0, 0, 0, 1 )
@@ -166,13 +155,35 @@ border_width_bottom = 2
 [sub_resource type="StyleBoxFlat" id=16]
 bg_color = Color( 0.227451, 0.67451, 0.360784, 1 )
 
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0, 0, 0, 0.509804 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+
 [node name="CMBattle" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 enemy = ExtResource( 5 )
 
 [node name="Background" type="TextureRect" parent="."]
@@ -226,7 +237,7 @@ __meta__ = {
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
-margin_right = 143.0
+margin_right = 144.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 0, 16 )
 custom_styles/fg = SubResource( 1 )
@@ -238,8 +249,8 @@ percent_visible = false
 [node name="Label" type="Label" parent="EnemyContainer/ProgressBar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
 text = "HP: 25/50"
 align = 1
 valign = 1
@@ -249,8 +260,8 @@ __meta__ = {
 
 [node name="Enemy" type="TextureRect" parent="EnemyContainer"]
 margin_top = 20.0
-margin_right = 143.0
-margin_bottom = 260.0
+margin_right = 144.0
+margin_bottom = 116.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 
@@ -304,89 +315,14 @@ percent_visible = false
 [node name="Label" type="Label" parent="PlayerPanel/PlayerData/ProgressBar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
 text = "HP: 25/50"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="ActionsPanel" type="Panel" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -468.005
-margin_top = 1.18921
-margin_right = -148.005
-margin_bottom = 33.1892
-custom_styles/panel = SubResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Actions" type="HBoxContainer" parent="ActionsPanel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 6.0
-margin_top = 6.0
-margin_right = -6.0
-margin_bottom = -6.0
-custom_constants/separation = 6
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Attack" type="Button" parent="ActionsPanel/Actions"]
-margin_right = 98.0
-margin_bottom = 19.0
-focus_mode = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-enabled_focus_mode = 0
-text = "Attack"
-
-[node name="Defend" type="Button" parent="ActionsPanel/Actions"]
-margin_left = 104.0
-margin_right = 203.0
-margin_bottom = 19.0
-focus_mode = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-enabled_focus_mode = 0
-text = "Defend"
-
-[node name="Run" type="Button" parent="ActionsPanel/Actions"]
-margin_left = 209.0
-margin_right = 308.0
-margin_bottom = 19.0
-focus_mode = 0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-enabled_focus_mode = 0
-text = "Run"
 
 [node name="Textbox" type="Panel" parent="."]
 anchor_right = 1.0
@@ -429,7 +365,6 @@ anims/mini_shake = SubResource( 12 )
 anims/shake = SubResource( 13 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 1.15686, -0.492599 )
 anchor_mode = 0
 current = true
 zoom = Vector2( 0.5, 0.5 )
@@ -442,9 +377,9 @@ margin_right = 294.0
 margin_bottom = 192.0
 focus_neighbour_right = NodePath("../No")
 mouse_filter = 2
+custom_fonts/font = ExtResource( 3 )
 custom_styles/focus = SubResource( 14 )
 custom_styles/normal = SubResource( 15 )
-custom_fonts/font = ExtResource( 3 )
 text = "Yes"
 
 [node name="No" type="Button" parent="."]
@@ -455,9 +390,9 @@ margin_right = 398.0
 margin_bottom = 192.0
 focus_neighbour_left = NodePath("../Yes")
 mouse_filter = 2
+custom_fonts/font = ExtResource( 3 )
 custom_styles/focus = SubResource( 16 )
 custom_styles/normal = SubResource( 15 )
-custom_fonts/font = ExtResource( 3 )
 text = "No"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -467,7 +402,167 @@ __meta__ = {
 stream = ExtResource( 7 )
 volume_db = -4.0
 autoplay = true
+
+[node name="ActionsPanel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -498.005
+margin_top = 1.189
+margin_right = -98.005
+margin_bottom = 33.189
+custom_styles/panel = SubResource( 17 )
+
+[node name="Actions" type="HBoxContainer" parent="ActionsPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 6.0
+margin_right = -6.0
+margin_bottom = -6.0
+custom_constants/separation = 6
+alignment = 1
+
+[node name="Attack" type="Button" parent="ActionsPanel/Actions"]
+margin_right = 125.0
+margin_bottom = 20.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 18 )
+custom_styles/pressed = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+enabled_focus_mode = 0
+text = "Attack"
+
+[node name="Defend" type="Button" parent="ActionsPanel/Actions"]
+margin_left = 131.0
+margin_right = 256.0
+margin_bottom = 20.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 18 )
+custom_styles/pressed = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+enabled_focus_mode = 0
+text = "Defend"
+
+[node name="Special" type="Button" parent="ActionsPanel/Actions"]
+margin_left = 262.0
+margin_right = 388.0
+margin_bottom = 20.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 18 )
+custom_styles/pressed = SubResource( 18 )
+custom_styles/normal = SubResource( 19 )
+enabled_focus_mode = 0
+text = "Special"
+
+[node name="Special1" type="Button" parent="ActionsPanel/Actions"]
+visible = false
+margin_left = 235.0
+margin_right = 308.0
+margin_bottom = 19.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+enabled_focus_mode = 0
+text = "Binary Beam"
+
+[node name="Special2" type="Button" parent="ActionsPanel/Actions"]
+visible = false
+margin_left = 235.0
+margin_right = 308.0
+margin_bottom = 19.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+enabled_focus_mode = 0
+
+[node name="Special3" type="Button" parent="ActionsPanel/Actions"]
+visible = false
+margin_left = 235.0
+margin_right = 308.0
+margin_bottom = 19.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+enabled_focus_mode = 0
+
+[node name="Special4" type="Button" parent="ActionsPanel/Actions"]
+visible = false
+margin_left = 235.0
+margin_right = 308.0
+margin_bottom = 19.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+enabled_focus_mode = 0
+
+[node name="Back" type="Button" parent="ActionsPanel/Actions"]
+visible = false
+margin_left = 235.0
+margin_right = 308.0
+margin_bottom = 19.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+enabled_focus_mode = 0
+text = "Back"
+
+[connection signal="pressed" from="Yes" to="." method="_on_Yes_pressed"]
 [connection signal="pressed" from="ActionsPanel/Actions/Attack" to="." method="_on_Attack_pressed"]
 [connection signal="pressed" from="ActionsPanel/Actions/Defend" to="." method="_on_Defend_pressed"]
-[connection signal="pressed" from="ActionsPanel/Actions/Run" to="." method="_on_Run_pressed"]
-[connection signal="pressed" from="Yes" to="." method="_on_Yes_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Special" to="." method="_on_Special_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Special1" to="." method="_on_Special1_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Special2" to="." method="_on_Special2_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Back" to="." method="_on_Special_pressed"]

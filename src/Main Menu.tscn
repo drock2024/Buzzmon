@@ -73,9 +73,6 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 text = "Start Game"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="End" type="Button" parent="."]
 margin_left = 552.7
@@ -88,9 +85,6 @@ custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 6 )
 custom_styles/normal = SubResource( 7 )
 text = "Quit Game"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 632.286, 181.295 )
@@ -101,5 +95,6 @@ zoom = Vector2( 0.5, 0.5 )
 stream = ExtResource( 4 )
 volume_db = -4.0
 autoplay = true
+
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="End" to="." method="_on_End_pressed"]
