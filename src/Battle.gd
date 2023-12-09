@@ -11,7 +11,7 @@ var is_defending = false
 var specialMoves = {
 	"BA": ["Sunk Cost Fallacy", "Rizz"],
 	"CM": ["Binary Beam","Self-Love"],
-	"AE": ["Aerodynamic Assault", "Defensive Driving"],
+	"AE": ["Aerodynamic Assault", "Countermeasures"],
 	"ME": ["Assault: Downgrade", "Defense: Downgrade"]
 }
 
@@ -24,7 +24,7 @@ var specialMovesDamage = {
 	"Digital Dash": 0,
 	"Orbital Strike": 100, 
 	"Aerodynamic Assault": 0, 
-	"Defensive Driving": 0,
+	"Countermeasures": 0,
 	"Mechanical Mayhem": 20, 
 	"Assault: Downgrade": 0, 
 	"Defense: Downgrade": 0
@@ -51,7 +51,6 @@ func _ready():
 	if GlobalStats.major == "ME":
 		$Player.texture = load("res://sprites/EngineerFrontSmall.png")
 		$Player.flip_h = true
-		$Player.rect_scale = Vector2(0.7, 0.7)
 	elif GlobalStats.major == "BA":
 		$Player.texture = load("res://sprites/BusinessFrontSmall.png")
 		$Player.flip_h = true
@@ -229,8 +228,8 @@ func specialMoves(moveName: String):
 		
 		display_text("You doubled your damage!")
 		yield(self, "textbox_closed")
-	elif moveName == "Defensive Driving":
-		display_text("You used Defensive Driving!")
+	elif moveName == "Countermeasures":
+		display_text("You deployed aircraft countermeasures!")
 		yield(self, "textbox_closed")
 		
 		State.defense *= 2
@@ -267,7 +266,7 @@ func specialMoves(moveName: String):
 #	"Digital Dash": 0,
 #	"Orbital Strike": 100, 
 #	"Aerodynamic Assault": 0, 
-#	"Defensive Driving": 0,
+#	"Countermeasures": 0,
 #	"Mechanical Mayhem": 20, 
 #	"Assault: Downgrade": 0, 
 #	"Defense Systems: Downgrade": 0
